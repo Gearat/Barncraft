@@ -1,6 +1,7 @@
 package com.Gearat.Barncraft;
 
 import com.Gearat.Barncraft.CreativeTab.CreativeTabsBarncraft;
+import com.Gearat.Barncraft.TileEntity.CoopTileEntity;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -20,7 +21,7 @@ public class Barncraft {
 	public static final String MODID = "Barncraft";
     public static final String VERSION = "0.0.1";
     public static CreativeTabs tabBarncraft = new CreativeTabsBarncraft("Barncraft");
-    public static Block BlockCoop; 
+    public static CoopTileEntity Coop;
     
     @Instance(value = "BarncraftID")
     public static Barncraft instance;
@@ -33,8 +34,8 @@ public class Barncraft {
     
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-    BlockCoop = new BlockCoop(Material.wood);
+  //  BlockCoop = new BlockCoop(Material.wood);
     
-    GameRegistry.registerTileEntity(BlockCoop, "ChickenCoop");
+    GameRegistry.registerTileEntity(CoopTileEntity.class, "ChickenCoopTileEntity");
     }
 }
