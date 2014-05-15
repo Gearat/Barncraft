@@ -4,6 +4,7 @@ import com.Gearat.Barncraft.CreativeTab.CreativeTabsBarncraft;
 import com.Gearat.Barncraft.Item.ItemTamingStick;
 import com.Gearat.Barncraft.TileEntity.CoopTileEntity;
 
+import net.Gearat.mod.Testmod.TestMod;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
@@ -38,7 +39,7 @@ public class Barncraft {
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
   //  BlockCoop = new BlockCoop(Material.wood);
-    TamingStick = new ItemTamingStick().setUnlocalizedName("TamingStick").setTextureName("TamingStick");
+    TamingStick = new ItemTamingStick().setUnlocalizedName("TamingStick").setTextureName(Barncraft.MODID.toLowerCase() + ":" +"TamingStick");
     	
     GameRegistry.registerItem(TamingStick, "TamingStick");
     GameRegistry.registerTileEntity(CoopTileEntity.class, "ChickenCoopTileEntity");
