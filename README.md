@@ -11,3 +11,4 @@ Modjam 4 or bust
   
   Currently: Adding Programmer art
   
+  Development was suspended due to prolonged illness.
